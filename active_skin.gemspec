@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "active_skin"
   spec.version       = ActiveSkin::VERSION
   spec.authors       = ["Wojtek Krysiak"]
-  spec.email         = ["wojciech.krysiak@kmpgroup.pl"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.email         = ["wojciech.g.krysiak@gmail.com"]
+  spec.summary       = %q{active_admin skin}
+  spec.description   = %q{active_admin skin}
   spec.homepage      = ""
   spec.license       = "MIT"
 
