@@ -1,24 +1,26 @@
 # ActiveSkin
 
-TODO: Write a gem description
+Flat skin for active admin.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'active_skin'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install active_skin
+    gem 'active_skin', :github => "KMPgroup/active_skin"
 
 ## Usage
 
-TODO: Write usage instructions here
+inlcude active skin css
+
+    # active_admin.css.scss
+
+    @import "active_admin/mixins";
+    @import "active_admin/base";
+    ...
+    @import "active_skin";
+    ...
+
+Add logo to app/assets/images/admin_logo.png (max 130x40px, best 100x25px)
 
 ## Contributing
 
