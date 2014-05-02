@@ -238,6 +238,12 @@ form fieldset.inputs
       @include rounded(0)
       text-shadow: none
       font-weight: bold
+  ol > li
+    label
+      padding-top: 7px
+    &.boolean label
+      padding-top: 0px
+      margin-bottom: 15px
 
 .panel
   background: #fff
@@ -267,10 +273,18 @@ form fieldset.inputs
 .comments form.active_admin_comment fieldset.inputs
   border: none
 
-body.logged_out 
-  #content_wrapper #active_admin_content
-    padding-bottom: 0
-  #login 
+html
+  height: 100%
+  min-height: 100%
+body.logged_out
+  height: 100%
+  #footer
+    display: none
+  #content_wrapper 
+    margin-top: 150px
+    #active_admin_content
+      padding-bottom: 0
+  #login
     form fieldset
       border: none
     > h2
@@ -286,3 +300,13 @@ body.logged_out
       padding: 6px 30px
     a
       margin-top: -25px
+
+
+form input[type=text], 
+form input[type=password], 
+form input[type=email], 
+form input[type=number], 
+form input[type=url], 
+form input[type=tel], 
+form textarea
+  @include rounded(0)
