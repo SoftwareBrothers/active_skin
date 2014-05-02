@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro)
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700)
 $skinTextColor: #1e2a33
 $skinTextActiveColor: #fff
 $skinTextTable: #7f8c8d
@@ -6,12 +6,13 @@ $skinActiveColor: #e73c3c
 $skinHeaderBck: #1e2a33
 
 html
-  background: #fff
+  background: #ecf0f1
   font-family: 'Source Sans Pro', sans-serif
 
 body.active_admin
   background: #ecf0f1
   font-family: 'Source Sans Pro', sans-serif
+  padding-bottom: 80px
 
 #header
   background: #ecf0f1
@@ -34,18 +35,20 @@ body.active_admin
     background: $skinActiveColor
     @include rounded(0)
     margin: -10px 0
-
   ul.tabs > li 
     font-size: 12px
     margin: 0
     a
-      padding: 14px 20px
+      padding: 13px 20px
       margin: 0
+  ul.tabs > li.has_nested a
+    background-position: 93% 50%
   ul.tabs > li.has_nested:hover
     a
       @include rounded(0)
       background-color: $skinActiveColor
       border: none
+      background-position: 93% 50%
     ul
       background: $skinActiveColor
       @include no-shadow()
@@ -55,6 +58,9 @@ body.active_admin
         color: #fff
         &:hover
           color: $skinTextColor
+  ul.tabs > li.has_nested.current a
+    background-color: $skinActiveColor
+    background-position: 93% 50%
   #utility_nav
     background: #fff
     padding: 0
@@ -83,6 +89,7 @@ body.active_admin
     background: $skinActiveColor
     color: #fff
     @include no-shadow()
+    text-shadow: none
     border: none
     padding: 17px
     font-size: 14px
@@ -156,6 +163,30 @@ table.index_table
 .pagination_information
   font-size: 12px
   color: $skinTextTable
+.pagination
+  margin-top: -2px
+  a, span.page.current
+    font-family: 'Source Sans Pro', sans-serif
+    border: 1px solid #d3d8dc
+    background: #ecf0f1
+    @include no-shadow()
+    text-shadow: none
+    font-size: 12px
+    font-weight: normal
+    padding: 4px 6px
+    margin-right: 1px
+  span.page.current,
+  a:not(.disabled):hover
+    background: $skinActiveColor
+    color: #fff
+  span.page.current
+    font-weight: 600
+  span.page.current:not(.disabled):hover
+    background: $skinActiveColor
+  .page.gap
+    display: none
+
+
 
 .sidebar_section.panel
   background: #fff
@@ -164,7 +195,7 @@ table.index_table
   @include rounded(0)
   form .buttons
     background: #f1f5f6
-    margin: 0 -15px -15px
+    margin: 25px -15px -15px
     padding: 10px 15px
   form fieldset
     margin-bottom: 0
@@ -185,8 +216,13 @@ table.index_table
       font-size: 13px
       text-transform: uppercase
       font-family: 'Source Sans Pro', sans-serif
+      padding: 7px 0
 
 #footer
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
   background: #fff
   padding: 15px 30px
   font-size: 13px
@@ -243,6 +279,7 @@ form fieldset.inputs
   ol > li
     label
       padding-top: 7px
+      text-transform: uppercase
     &.boolean label
       padding-top: 0px
       margin-bottom: 15px
@@ -322,3 +359,22 @@ form input[type=url],
 form input[type=tel], 
 form textarea
   @include rounded(0)
+  font-family: 'Source Sans Pro', sans-serif
+  padding: 5px 10px
+
+form.filter_form .filter_form_field.filter_date_range input[type=text]
+  background-position: 100% 4px
+
+
+body.logged_in 
+  .flashes 
+    .flash
+      position: inherit
+      top: 0
+      text-shadow: none
+
+strong, b
+  font-weight: 600
+
+.blank_slate_container .blank_slate
+  color: #7f8c8d
