@@ -27,7 +27,7 @@ Flat skin for active admin.
 
 Add this line to your application's Gemfile:
 
-    gem 'active_skin', :github => "KMPgroup/active_skin"
+    gem 'active_skin'
 
 ## Usage
 
