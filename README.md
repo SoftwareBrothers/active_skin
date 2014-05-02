@@ -2,6 +2,27 @@
 
 Flat skin for active admin.
 
+## Screens
+
+<table>
+  <tr>
+    <td>
+      <a href="./doc/active-skin-login.png"><img src="./doc/active-skin-login.png"></a>
+    </td>
+    <td>
+      <a href="./doc/active-skin-menu.png"><img src="./doc/active-skin-menu.png"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="./doc/active-skin-users.png"><img src="./doc/active-skin-users.png"></a>
+    </td>
+    <td>
+      <a href="./doc/active-skin-edit.png"><img src="./doc/active-skin-edit.png"></a>
+    </td>
+  </tr>
+</table>
+
 ## Installation
 
 Add this line to your application's Gemfile:
