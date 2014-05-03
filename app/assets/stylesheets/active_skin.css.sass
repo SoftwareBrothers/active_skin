@@ -1,9 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700)
-$skinTextColor: #1e2a33
-$skinTextActiveColor: #fff
-$skinTextTable: #7f8c8d
-$skinActiveColor: #e73c3c
-$skinHeaderBck: #1e2a33
+$skinTextColor: #1e2a33 !default
+$skinTextActiveColor: #fff !default
+$skinTextTable: #7f8c8d !default
+$skinActiveColor: #e73c3c !default
+$skinHeaderBck: #1e2a33 !default
+$panelHeaderBck: #2c3e50 !default
 
 html
   background: #ecf0f1
@@ -21,7 +22,7 @@ body.active_admin
   height: 40px
   padding: 0
   h1.site_title
-    background: #fff image-url("admin_logo.png") no-repeat 30px 50%
+    // background: #fff image-url("admin_logo.png") no-repeat 30px 50%
     padding-left: 130px
     color: $skinTextColor
     text-indent: -999999px
@@ -200,7 +201,7 @@ table.index_table
   form fieldset
     margin-bottom: 0
   & > h3
-    background: #2c3e50
+    background: $panelHeaderBck
     color: #fff
     border: none
     margin: 0
@@ -268,7 +269,7 @@ form fieldset.inputs
     top: 0
     span
       background: #f0f4f5
-      color: #2c3e50
+      color: $panelHeaderBck
       border: none
       margin: 0
       padding: 8px 15px
@@ -292,7 +293,7 @@ form fieldset.inputs
   @include rounded(0)
   > h3
     background: #f0f4f5
-    color: #2c3e50
+    color: $panelHeaderBck
     padding: 8px 15px
     @include no-shadow()
     @include rounded(0)
@@ -327,7 +328,7 @@ body.logged_out
     form fieldset
       border: none
     > h2
-      background: #2c3e50
+      background: $panelHeaderBck
       font-family: 'Source Sans Pro', sans-serif
       color: #fff
       @include no-shadow()
