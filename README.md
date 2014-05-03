@@ -2,6 +2,8 @@
 
 Flat skin for active admin.
 
+[![Gem Version](https://badge.fury.io/rb/active_skin.svg)](http://badge.fury.io/rb/active_skin) [![Code Climate](https://codeclimate.com/github/KMPgroup/active_skin.png)](https://codeclimate.com/github/KMPgroup/active_skin)
+
 ## Screens
 
 <table>
