@@ -45,9 +45,40 @@ inlcude active skin css
 
 Add logo to app/assets/images/admin_logo.png (max 130x40px, best 100x25px)
 
+You can even change basic colors of the theme by placing some variables above import line in active_admin.css.scss
+  
+    ...
+    $skinActiveColor: #001cee;
+    $skinHeaderBck: #002744;
+    $panelHeaderBck: #002744;
+
+    @import "active_skin";
+    ...
+
+### Color examples
+
+<table>
+  <tr>
+    <td>
+      <a href="./doc/color1.png"><img src="./doc/color1.png"></a>
+    </td>
+    <td>
+      <a href="./doc/color2.png"><img src="./doc/color2.png"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="./doc/color3.png"><img src="./doc/color3.png"></a>
+    </td>
+    <td>
+      <a href="./doc/color4.png"><img src="./doc/color4.png"></a>
+    </td>
+  </tr>
+</table>
+
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/active_skin/fork )
+1. Fork it ( http://github.com/KMPgroup/active_skin/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
