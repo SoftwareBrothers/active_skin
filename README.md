@@ -43,9 +43,11 @@ inlcude active skin css
     @import "active_skin";
     ...
 
-Add logo to app/assets/images/admin_logo.png (max 130x40px, best 100x25px)
+Change logo by setting the `$skinLogo` variable above active_skin import line in active_admin.css.scss
 
-You can even change basic colors of the theme by placing some variables above import line in active_admin.css.scss
+    $skinLogo: url("admin_logo.png") no-repeat 0 0;
+
+You can even change basic colors of the theme by placing some other variables:
   
     ...
     $skinActiveColor: #001cee;

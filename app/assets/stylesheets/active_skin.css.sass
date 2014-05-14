@@ -5,6 +5,7 @@ $skinTextTable: #7f8c8d !default
 $skinActiveColor: #e73c3c !default
 $skinHeaderBck: #1e2a33 !default
 $panelHeaderBck: #2c3e50 !default
+$skinLogo: #fff image-url("admin_logo.png") no-repeat 30px 50% !default
 
 html
   background: #ecf0f1
@@ -22,7 +23,8 @@ body.active_admin
   height: 40px
   padding: 0
   h1.site_title
-    background: #fff image-url("admin_logo.png") no-repeat 30px 50% 
+    background-color: #fff
+    background: $skinLogo
     padding-left: 130px
     color: $skinTextColor
     text-indent: -999999px
