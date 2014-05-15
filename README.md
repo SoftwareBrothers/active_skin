@@ -2,7 +2,7 @@
 
 Flat skin for active admin.
 
-[![Gem Version](https://badge.fury.io/rb/active_skin.svg)](http://badge.fury.io/rb/active_skin) [![Code Climate](https://codeclimate.com/github/KMPgroup/active_skin.png)](https://codeclimate.com/github/KMPgroup/active_skin) [![KMPIT](http://kmpit.com/badge_kmpit.png)](http://bitly.com/kmpit) [![KMPIT](http://kmpit.com/badge_howwedoapps.png)](http://bitly.com/howwedoapps)
+[![Gem Version](https://badge.fury.io/rb/active_skin.svg)](http://badge.fury.io/rb/active_skin) [![Code Climate](https://codeclimate.com/github/KMPgroup/active_skin.png)](https://codeclimate.com/github/KMPgroup/active_skin) [![KMPIT](http://kmpit.com/badge_kmpit.png)](http://bitly.com/kmpitcom) [![KMPIT](http://kmpit.com/badge_howwedoapps.png)](http://bitly.com/howwedoapps)
 
 ## Screens
 
