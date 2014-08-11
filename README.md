@@ -27,7 +27,9 @@ Flat skin for active admin.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+As active_skin is the css theme for the [active_admin](https://github.com/gregbell/active_admin) administration framework - you have to install if first.
+
+Having active admin installed add the following line to your application's Gemfile:
 
     gem 'active_skin'
 
