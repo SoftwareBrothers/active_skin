@@ -237,7 +237,10 @@ table.index_table
     padding: 0
 
 
-form input[type=submit]
+form input[type=submit],
+a.button, 
+a:link.button, 
+a:visited.button
   @include no-shadow()
   @include rounded(0)
   background: $skinActiveColor
