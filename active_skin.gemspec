@@ -6,8 +6,8 @@ require 'active_skin/version'
 Gem::Specification.new do |spec|
   spec.name          = "active_skin"
   spec.version       = ActiveSkin::VERSION
-  spec.authors       = ["Wojtek Krysiak"]
-  spec.email         = ["wojciech.g.krysiak@gmail.com"]
+  spec.authors       = ["Wojtek Krysiak", "Patryk Zabielski"]
+  spec.email         = ["wojciech.g.krysiak@gmail.com", "patryk.zabielski@rst-it.com"]
   spec.summary       = %q{active_admin skin}
   spec.description   = %q{active_admin skin}
   spec.homepage      = "https://github.com/KMPgroup/active_skin"
