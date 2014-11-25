@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["wojciech.g.krysiak@gmail.com", "patryk.zabielski@rst-it.com"]
   spec.summary       = %q{active_admin skin}
   spec.description   = %q{active_admin skin}
-  spec.homepage      = "https://github.com/KMPgroup/active_skin"
+  spec.homepage      = "https://github.com/rstgroup/active_skin"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
