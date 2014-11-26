@@ -38,7 +38,7 @@ body.active_admin
     background: $skinActiveColor
     @include rounded(0)
     margin: -10px 0
-  ul.tabs > li 
+  ul.tabs > li
     font-size: 12px
     margin: 0
     a
@@ -87,17 +87,19 @@ body.active_admin
   margin: 0
   h2
     color: #fff
-  .action_items a
-    @include rounded(0)
-    background: $skinActiveColor
-    color: #fff
-    @include no-shadow()
-    text-shadow: none
-    border: none
-    padding: 17px
-    font-size: 14px
-    &:hover
-      background: lighten( $skinActiveColor, 10% ) !important
+  .action_items
+    span.action_item
+      & > a
+        @include rounded(0)
+        background: $skinActiveColor
+        color: #fff
+        @include no-shadow()
+        text-shadow: none
+        border: none
+        padding: 17px
+        font-size: 14px
+        &:hover
+          background: lighten( $skinActiveColor, 10% ) !important
 
 #active_admin_content
   @include clearfix
@@ -105,7 +107,7 @@ body.active_admin
     height: 30px
   a.table_tools_button, .table_tools .dropdown_menu_button
     @include rounded(0)
-    @include no-shadow()  
+    @include no-shadow()
     color: $skinTextColor
     background: #fff
     padding: 7px 15px
@@ -114,7 +116,7 @@ body.active_admin
   .table_tools_segmented_control li
     a
       @include rounded(0)
-      @include no-shadow()  
+      @include no-shadow()
       color: $skinTextColor
       background: #fff
       padding: 7px 15px
@@ -130,7 +132,7 @@ body.active_admin
         span.count
           color: #fff
 
-table.index_table 
+table.index_table
   border: 1px solid #d3d8dc
   background: #fff
   th
@@ -214,7 +216,7 @@ table.index_table
     text-shadow: none
     font-weight: bold
   .filter_form_field
-    label 
+    label
       color: #95a5a6
       font-weight: normal
       font-size: 13px
@@ -250,8 +252,8 @@ a:visited.button
   padding: 11px 20px
   &:hover
     background: lighten( $skinActiveColor, 10% ) !important
-form fieldset.buttons li.cancel a, 
-form fieldset.actions li.cancel a, 
+form fieldset.buttons li.cancel a,
+form fieldset.actions li.cancel a,
 form.filter_form a.clear_filters_btn
   background: #ecf0f1
   @include no-shadow()
@@ -326,7 +328,7 @@ body.logged_out
   height: 100%
   #footer
     display: none
-  #content_wrapper 
+  #content_wrapper
     margin-top: 150px
     #active_admin_content
       padding-bottom: 0
@@ -353,17 +355,17 @@ body.logged_out
     top: 0
     left: 0
     right: 0
-    padding: 15px 
+    padding: 15px
     border-bottom: 1px solid #DEDE8B
     text-shadow: none
 
 
-form input[type=text], 
-form input[type=password], 
-form input[type=email], 
-form input[type=number], 
-form input[type=url], 
-form input[type=tel], 
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form input[type=number],
+form input[type=url],
+form input[type=tel],
 form textarea
   @include rounded(0)
   font-family: 'Source Sans Pro', sans-serif
@@ -373,8 +375,8 @@ form.filter_form .filter_form_field.filter_date_range input[type=text]
   background-position: 100% 4px
 
 
-body.logged_in 
-  .flashes 
+body.logged_in
+  .flashes
     .flash
       position: inherit
       top: 0
