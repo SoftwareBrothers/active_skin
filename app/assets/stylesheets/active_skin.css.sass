@@ -4,7 +4,9 @@ $skinTextActiveColor: #fff !default
 $skinTextTable: #7f8c8d !default
 $skinActiveColor: #e73c3c !default
 $skinHeaderBck: #1e2a33 !default
+$skinHeaderTextColor: #FFFFFF !default
 $panelHeaderBck: #2c3e50 !default
+$panelHeaderTextColor: #FFFFFF !default
 $skinLogo: #fff image-url("active_skin/default_logo.png") no-repeat 30px 0 !default
 
 html
@@ -86,7 +88,7 @@ body.active_admin
   border-bottom: 4px solid $skinActiveColor
   margin: 0
   h2
-    color: #fff
+    color: $skinHeaderTextColor
   .action_items a
     @include rounded(0)
     background: $skinActiveColor
@@ -157,7 +159,6 @@ table.index_table
   tr.even td
     background: #ecf0f1
 
-
 .download_links
   color: $skinTextTable
   font-size: 12px
@@ -190,8 +191,6 @@ table.index_table
   .page.gap
     display: none
 
-
-
 .sidebar_section.panel
   background: #fff
   border: 1px solid #d3d8dc
@@ -205,7 +204,7 @@ table.index_table
     margin-bottom: 0
   & > h3
     background: $panelHeaderBck
-    color: #fff
+    color: $panelHeaderTextColor
     border: none
     margin: 0
     padding: 8px 15px
@@ -275,7 +274,7 @@ form fieldset.inputs
     top: 0
     span
       background: #f0f4f5
-      color: $panelHeaderBck
+      color: #5E6469
       border: none
       margin: 0
       padding: 8px 15px
