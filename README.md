@@ -35,7 +35,7 @@ Having active admin installed add the following line to your application's Gemfi
 
 ## Usage
 
-inlcude active skin css
+include active skin css
 
     # active_admin.css.scss
 
@@ -50,7 +50,7 @@ Change logo by setting the `$skinLogo` variable above active_skin import line in
     $skinLogo: url("admin_logo.png") no-repeat 0 0;
 
 You can even change basic colors of the theme by placing some other variables:
-  
+
     ...
     $skinActiveColor: #001cee;
     $skinHeaderBck: #002744;
