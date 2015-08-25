@@ -8,14 +8,15 @@ $skinHeaderTextColor: #FFFFFF !default
 $panelHeaderBck: #2c3e50 !default
 $panelHeaderTextColor: #FFFFFF !default
 $skinLogo: #fff image-url("active_skin/default_logo.png") no-repeat 30px 0 !default
+$fontFamily: 'Source Sans Pro', sans-serif !default
 
 html
   background: #ecf0f1
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: $fontFamily
 
 body.active_admin
   background: #ecf0f1
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: $fontFamily
   padding-bottom: 80px
 
 #header
@@ -171,7 +172,7 @@ table.index_table
 .pagination
   margin-top: -2px
   a, span.page.current
-    font-family: 'Source Sans Pro', sans-serif
+    font-family: $fontFamily
     border: 1px solid #d3d8dc
     background: #ecf0f1
     @include no-shadow()
@@ -218,7 +219,7 @@ table.index_table
       font-weight: normal
       font-size: 13px
       text-transform: uppercase
-      font-family: 'Source Sans Pro', sans-serif
+      font-family: $fontFamily
       padding: 7px 0
 
 #footer
@@ -308,7 +309,7 @@ form fieldset.inputs
 
 .attributes_table table th, .attributes_table table td
   padding: 10px 0
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: $fontFamily
   color: #95a5a6
 .attributes_table table th
   font-weight: normal
@@ -334,7 +335,7 @@ body.logged_out
       border: none
     > h2
       background: $panelHeaderBck
-      font-family: 'Source Sans Pro', sans-serif
+      font-family: $fontFamily
       color: #fff
       @include no-shadow()
       @include rounded(0)
@@ -365,7 +366,7 @@ form input[type=url],
 form input[type=tel], 
 form textarea
   @include rounded(0)
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: $fontFamily
   padding: 5px 10px
 
 form.filter_form .filter_form_field.filter_date_range input[type=text]
