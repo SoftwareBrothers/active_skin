@@ -5,17 +5,18 @@ $skinTextTable: #7f8c8d !default
 $skinActiveColor: #e73c3c !default
 $skinHeaderBck: #1e2a33 !default
 $skinHeaderTextColor: #FFFFFF !default
+$skinFontFamily: 'Source Sans Pro', sans-serif !default
 $panelHeaderBck: #2c3e50 !default
 $panelHeaderTextColor: #FFFFFF !default
 $skinLogo: #fff image-url("active_skin/default_logo.png") no-repeat 30px 0 !default
 
 html
   background: #ecf0f1
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: $skinFontFamily
 
 body.active_admin
   background: #ecf0f1
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: $skinFontFamily
   padding-bottom: 80px
 
 #header
@@ -173,7 +174,7 @@ table.index_table
 .pagination
   margin-top: -2px
   a, span.page.current
-    font-family: 'Source Sans Pro', sans-serif
+    font-family: $skinFontFamily
     border: 1px solid #d3d8dc
     background: #ecf0f1
     @include no-shadow()
@@ -220,7 +221,7 @@ table.index_table
       font-weight: normal
       font-size: 13px
       text-transform: uppercase
-      font-family: 'Source Sans Pro', sans-serif
+      font-family: $skinFontFamily
       padding: 7px 0
 
 #footer
@@ -310,7 +311,7 @@ form fieldset.inputs
 
 .attributes_table table th, .attributes_table table td
   padding: 10px 0
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: $skinFontFamily
   color: #95a5a6
 .attributes_table table th
   font-weight: normal
@@ -336,7 +337,7 @@ body.logged_out
       border: none
     > h2
       background: $panelHeaderBck
-      font-family: 'Source Sans Pro', sans-serif
+      font-family: $skinFontFamily
       color: #fff
       @include no-shadow()
       @include rounded(0)
@@ -367,7 +368,7 @@ form input[type=url],
 form input[type=tel], 
 form textarea
   @include rounded(0)
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: $skinFontFamily
   padding: 5px 10px
 
 form.filter_form .filter_form_field.filter_date_range input[type=text]
