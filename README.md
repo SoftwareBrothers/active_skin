@@ -88,7 +88,7 @@ You can even change basic colors of the theme by placing some other variables:
 
 ## License
 
-active_skin is Copyright © 2018 SoftwareBrothers.co. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE) file.
+active_skin is Copyright © 2018 SoftwareBrothers.co. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.txt) file.
 
 ## About SoftwareBrothers.co
 
