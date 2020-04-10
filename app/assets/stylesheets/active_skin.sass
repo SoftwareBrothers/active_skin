@@ -31,54 +31,65 @@ body.active_admin
     padding-left: 130px
     color: $skinTextColor
     text-indent: -999999px
+  .header-item
+    top: 0
   a, a:link
     color: $skinTextColor
   ul.tabs
     padding: 0
     font-size: 0
-  ul.tabs > li:hover > a, ul.tabs > li.current > a
-    color: $skinTextActiveColor
-    background: $skinActiveColor
-    @include rounded(0)
-    margin: -10px 0
-  ul.tabs > li 
-    font-size: 12px
-    margin: 0
-    a
-      padding: 13px 20px
+    & > li.menu_item
+      font-size: 12px
       margin: 0
-  ul.tabs > li.has_nested a
-    background-position: 93% 50%
-  ul.tabs > li.has_nested:hover
-    a
-      @include rounded(0)
-      background-color: $skinActiveColor
-      border: none
-      background-position: 93% 50%
-    ul
-      background: $skinActiveColor
-      @include no-shadow()
-      @include rounded(0)
-      border: none
-      li a
-        color: #fff
+      a
+        padding: 13px 20px
+        margin: 0
+      & > a
+        @include rounded(0)
+      &:hover > a, &.current > a
+        @include rounded(0)
+        border: none
+        color: $skinTextActiveColor
+        background-color: $skinActiveColor
+      ul.menu
+        @include rounded(0)
+        background: $skinActiveColor
+        a
+          color: #fff
+          &:hover
+            color: $skinTextColor
+    &#utility_nav
+      background: #fff
+      padding: 0
+      & > li.menu_item
+        ul.menu
+          a:hover
+            color: $skinTextColor
+        &.has_nested > ul.menu
+          right: 0
+          li.menu_item.has_nested
+            display: list-item
+            & > a
+              background-image: none
+              &::before
+                content: ''
+                background: url($menu-arrow-right-light-icon-url) no-repeat calc(100% - 7px) 50%
+                transform: scaleX(-1)
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+            &:hover > a::before
+              background-image: url($menu-arrow-right-dark-icon-url)
+            & > ul.menu
+              left: unset
+              right: 100%
+      li#logout a
+        font-weight: bold
+        text-decoration: underline
         &:hover
-          color: $skinTextColor
-  ul.tabs > li.has_nested.current a
-    background-color: $skinActiveColor
-    background-position: 93% 50%
-  #utility_nav
-    background: #fff
-    padding: 0
-    li#logout a
-      font-weight: bold
-      text-decoration: underline
-      &:hover
-        text-decoration: none
-    li a
-      &:hover
-        background: none
-        color: $skinTextColor
+          text-decoration: none
 
 #title_bar
   background: $skinHeaderBck
