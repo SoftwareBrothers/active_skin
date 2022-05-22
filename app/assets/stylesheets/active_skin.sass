@@ -1,64 +1,77 @@
-@import url('//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&subset=latin,latin-ext')
+@import url('//fonts.googleapis.com/css?family=Source+Sans+Pro:400,500,600,700&subset=latin,latin-ext')
+$skinFontFamily: 'Source Sans Pro', sans-serif !default
+
+$background: #fff !default
+$appLogo: $background image-url("active_skin/default_logo.png") no-repeat 30px 2px !default
+$headerColor: #f4f7fb !default
+$fontSize: 13px !default
+$dangerColor: #ec5e68 !default
+$inactiveColor: #a89e9e !default
+$textColor: #3b4755 !default
+$textHoverColor: #222 !default
+$borderColor: #d3d8dc !default
+
 $skinTextColor: #1e2a33 !default
 $skinTextActiveColor: #fff !default
 $skinTextTable: #7f8c8d !default
-$skinActiveColor: #e73c3c !default
+$skinActiveColor: #5a68c7 !default
 $skinHeaderBck: #1e2a33 !default
-$skinHeaderTextColor: #FFFFFF !default
-$skinFontFamily: 'Source Sans Pro', sans-serif !default
 $panelHeaderBck: #2c3e50 !default
 $panelHeaderTextColor: #FFFFFF !default
-$skinLogo: #fff image-url("active_skin/default_logo.png") no-repeat 30px 0 !default
 
 html
-  background: #ecf0f1
+  background: $background
   font-family: $skinFontFamily
 
 body.active_admin
-  background: #ecf0f1
+  background: $background
   font-family: $skinFontFamily
   padding-bottom: 80px
 
 #header
-  background: #ecf0f1
-  border: none
+  background: $headerColor
+  border-bottom: 1px solid #dfe3e6
   text-shadow: none
-  height: 40px
-  padding: 0
+  height: 35px
+  .header-item
+    .current a
+      border-radius: 0
+      border-bottom: 3px solid $skinActiveColor
   h1.site_title
-    background-color: #fff
-    background: $skinLogo
+    background-color: $background
+    background: $appLogo
     padding-left: 130px
     color: $skinTextColor
     text-indent: -999999px
   a, a:link
-    color: $skinTextColor
+    color: #768999
+    font-weight: 500
+    font-size: $fontSize
   ul.tabs
     padding: 0
     font-size: 0
   ul.tabs > li:hover > a, ul.tabs > li.current > a
-    color: $skinTextActiveColor
-    background: $skinActiveColor
-    @include rounded(0)
+    color: $textHoverColor
+    background: none
     margin: -10px 0
-  ul.tabs > li 
-    font-size: 12px
+  ul.tabs > li
+    font-size: $fontSize
     margin: 0
     a
-      padding: 13px 20px
+      padding: 10px 16px
       margin: 0
   ul.tabs > li.has_nested a
     background-position: 93% 50%
   ul.tabs > li.has_nested:hover
     a
-      @include rounded(0)
+      border-radius: 0
       background-color: $skinActiveColor
       border: none
       background-position: 93% 50%
     ul
       background: $skinActiveColor
-      @include no-shadow()
-      @include rounded(0)
+      box-shadow: none
+      border-radius: 0
       border: none
       li a
         color: #fff
@@ -67,8 +80,9 @@ body.active_admin
   ul.tabs > li.has_nested.current a
     background-color: $skinActiveColor
     background-position: 93% 50%
+
   #utility_nav
-    background: #fff
+    background: $headerColor
     padding: 0
     li#logout a
       font-weight: bold
@@ -80,46 +94,69 @@ body.active_admin
         background: none
         color: $skinTextColor
 
+
 #title_bar
-  background: $skinHeaderBck
+  background: $background
   text-shadow: none
   border: none
-  padding: 15px 30px
-  @include no-shadow()
-  border-bottom: 4px solid $skinActiveColor
-  margin: 0
+  padding: 10px 30px 0
+  box-shadow: none
   h2
-    color: $skinHeaderTextColor
+    color: $textColor
+    font-size: 2.1em
   .action_items a,
   .action_items span.action_item
     & > a, & > .dropdown_menu > a
-      @include rounded(0)
       background: $skinActiveColor
-      color: #fff
-      @include no-shadow()
+      border-radius: 4px
+      color: $background
+      box-shadow: none
       text-shadow: none
       border: none
-      padding: 17px
-      font-size: 14px
+      padding: 13px 18px
+      margin-left: 3px
+      font-size: $fontSize
+      font-weight: 400
       &:hover
         background: lighten( $skinActiveColor, 10% ) !important
+
 
 #active_admin_content
   @include clearfix
   .table_tools
     height: 30px
+  .panel
+    font-size: $fontSize
+    border-radius: 0
+    background: $background
+    h3
+      padding: 15px
+      background: #f4f7fb
+      border: 1px #e6e9ec
+      border-style: none none solid none
+      color: $textColor
+    a
+      color: $textColor
+    a:hover
+      color: $textHoverColor
+    th
+      width: 250px
+  .panel_contents
+    overflow-x: hidden
   a.table_tools_button, .table_tools .dropdown_menu_button
-    @include rounded(0)
-    @include no-shadow()  
+    box-shadow: none
     color: $skinTextColor
-    background: #fff
+    background: $background
+    border-radius: 4px
     padding: 7px 15px
+    margin-left: 0
+    margin-right: 5px
     font-weight: normal
+    font-size: $fontSize
     text-shadow: none
   .table_tools_segmented_control li
     a
-      @include rounded(0)
-      @include no-shadow()  
+      box-shadow: none
       color: $skinTextColor
       background: #fff
       padding: 7px 15px
@@ -135,51 +172,80 @@ body.active_admin
         span.count
           color: #fff
 
-table.index_table 
+#main_content
+  .cancel a
+    border-radius: 4px
+    background: $background
+    font-weight: 400
+    font-size: $fontSize
+    &:hover
+      border-color: $skinActiveColor
+      color: $skinActiveColor
+  fieldset
+    padding: 20px
+  input
+    font-size: $fontSize
+
+
+table.index_table
   border: 1px solid #d3d8dc
-  background: #fff
+  background: $background
+  font-size: $fontSize
   th
-    background: #f1f5f6
-    border: 1px #d3d8dc
-    border-style: none solid solid none
-    padding: 7px 10px
-    @include no-shadow()
+    font-size: $fontSize
+    background: #ebeef5
+    border: 1px #e6e9ec
+    border-style: none none solid none
+    padding: 14px 10px
+    box-shadow: none
     color: $skinTextColor
     a, a:link, a:visited
       color: $skinTextColor
     &:last-child
       border-right: none
   td
+    font-size: $fontSize
     color: $skinTextTable
+    padding: 18px 10px
     a, a:link, a:visited
+      text-decoration: none
       color: $skinTextTable
       display: inline-block
-      padding: 2px 3px
-      margin: -2px 0
       &:hover
-        color: #fff
-        background: $skinActiveColor
+        color: $textHoverColor
   tr.even td
-    background: #ecf0f1
+    background: $background
+
+
+// Tags
+.status_tag
+  border-radius: 4px
+  padding: 5px 8px
+
+.status_tag.no
+  background: $inactiveColor
+
+.status_tag.yes
+  background: $skinActiveColor
 
 .download_links
   color: $skinTextTable
-  font-size: 12px
+  font-size: $fontSize
   a
     color: $skinActiveColor
     font-weight: bold
 .pagination_information
-  font-size: 12px
+  font-size: $fontSize
   color: $skinTextTable
 .pagination
   margin-top: -2px
   a, span.page.current
     font-family: $skinFontFamily
     border: 1px solid #d3d8dc
-    background: #ecf0f1
-    @include no-shadow()
+    background: $background
+    box-shadow: none
     text-shadow: none
-    font-size: 12px
+    font-size: $fontSize
     font-weight: normal
     padding: 4px 6px
     margin-right: 1px
@@ -194,13 +260,20 @@ table.index_table
   .page.gap
     display: none
 
+select
+  border-radius: 3px
+  border-color: #c9d0d6
+  padding: 3px 0
+  color: $textColor
+  height: 25px
+  width: 80%
+
 .sidebar_section.panel
-  background: #fff
-  border: 1px solid #d3d8dc
-  @include no-shadow()
-  @include rounded(0)
+  background: $background
+  border: 1px solid $borderColor
+  box-shadow: none
   form .buttons
-    background: #f1f5f6
+    background: $background
     margin: 25px -15px -15px
     padding: 10px 15px
   form fieldset
@@ -211,18 +284,48 @@ table.index_table
     border: none
     margin: 0
     padding: 8px 15px
-    @include no-shadow()
-    @include rounded(0)
+    box-shadow: none
     text-shadow: none
     font-weight: bold
   .filter_form_field
-    label 
+    label
       color: #95a5a6
       font-weight: normal
-      font-size: 13px
+      font-size: $fontSize
       text-transform: uppercase
       font-family: $skinFontFamily
       padding: 7px 0
+    select
+      border-radius: 3px
+      border-color: #c9d0d6
+      padding: 3px 0
+      color: $textColor
+  .panel_contents
+    .clear_filters_btn
+      border-radius: 4px
+      background: $background
+      font-weight: 400
+      font-size: $fontSize
+      &:hover
+        border-color: $skinActiveColor
+        color: $skinActiveColor
+
+.selectize-input
+  background: $background
+  border-radius: 3px
+  border-color: #c9d0d6
+  box-shadow: none
+  color: $textColor
+  padding: 4px 10px
+  z-index: 0
+  width: 80%
+
+.sidebar .selectize-input
+  width: 100%
+
+.selectize-control.single .selectize-input, .selectize-dropdown.single
+  border-color: #c9d0d6
+  background: $background
 
 #footer
   position: fixed
@@ -231,7 +334,7 @@ table.index_table
   right: 0
   background: #fff
   padding: 15px 30px
-  font-size: 13px
+  font-size: $fontSize
   color: $skinTextTable
   border-top: 1px solid #d3d8dc
   p
@@ -240,40 +343,39 @@ table.index_table
 
 
 form input[type=submit],
-a.button, 
-a:link.button, 
+a.button,
+a:link.button,
 a:visited.button
-  @include no-shadow()
-  @include rounded(0)
   background: $skinActiveColor
-  color: #fff
   border: none
-  text-shadow: none
+  border-radius: 4px
+  box-shadow: none
+  color: #fff
+  font-size: $fontSize
+  font-weight: 400
   padding: 10px 20px
+  text-shadow: none
   &:hover
     background: lighten( $skinActiveColor, 10% ) !important
-form fieldset.buttons li.cancel a, 
-form fieldset.actions li.cancel a, 
+form fieldset.buttons li.cancel a,
+form fieldset.actions li.cancel a,
 form.filter_form a.clear_filters_btn
-  background: #ecf0f1
-  @include no-shadow()
-  @include rounded(0)
+  background: $background
+  box-shadow: none
   text-shadow: none
   padding: 10px 20px
   color: #95a5a6
   &:hover
-    background: lighten( #ecf0f1, 5% ) !important
+    background: lighten( $background, 5% ) !important
 
 form fieldset.inputs
   background: #fff
   border: 1px solid #d3d8dc
   position: relative
   padding-top: 50px
-  @include no-shadow()
-  @include rounded(0)
+  box-shadow: none
   legend
     border-bottom: 1px solid #d3d8dc
-    position: absolute
     top: 0
     span
       background: #f0f4f5
@@ -281,8 +383,7 @@ form fieldset.inputs
       border: none
       margin: 0
       padding: 8px 15px
-      @include no-shadow()
-      @include rounded(0)
+      box-shadow: none
       text-shadow: none
       font-weight: bold
   ol > li
@@ -297,14 +398,12 @@ form fieldset.inputs
   background: #fff
   border: 1px solid #d3d8dc
   position: relative
-  @include no-shadow()
-  @include rounded(0)
+  box-shadow: none
   > h3
     background: #f0f4f5
     color: $panelHeaderBck
     padding: 8px 15px
-    @include no-shadow()
-    @include rounded(0)
+    box-shadow: none
     text-shadow: none
     font-weight: bold
     border-style: none none solid
@@ -315,7 +414,7 @@ form fieldset.inputs
   color: #95a5a6
 .attributes_table table th
   font-weight: normal
-  font-size: 13px
+  font-size: $fontSize
   text-transform: uppercase
 
 .comments form.active_admin_comment fieldset.inputs
@@ -328,7 +427,7 @@ body.logged_out
   height: 100%
   #footer
     display: none
-  #content_wrapper 
+  #content_wrapper
     margin-top: 150px
     #active_admin_content
       padding-bottom: 0
@@ -339,8 +438,7 @@ body.logged_out
       background: $panelHeaderBck
       font-family: $skinFontFamily
       color: #fff
-      @include no-shadow()
-      @include rounded(0)
+      box-shadow: none
       padding: 8px 15px
     fieldset.actions
       background: #f1f5f6
@@ -355,38 +453,46 @@ body.logged_out
     top: 0
     left: 0
     right: 0
-    padding: 15px 
+    padding: 15px
     border-bottom: 1px solid #DEDE8B
     text-shadow: none
 
 
-form input[type=text], 
-form input[type=password], 
-form input[type=email], 
-form input[type=number], 
-form input[type=url], 
-form input[type=tel], 
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form input[type=number],
+form input[type=url],
+form input[type=tel],
 form textarea
-  @include rounded(0)
   font-family: $skinFontFamily
   padding: 5px 10px
 
 form.filter_form .filter_form_field.filter_date_range input[type=text]
   background-position: 100% 4px
 
-
-body.logged_in 
-  .flashes 
+// Flash cards for errors, warning and alerts.
+body.logged_in
+  .flashes
     .flash
-      position: inherit
-      top: 0
+      position: fixed
+      left: 20px
+      bottom: 70px
       text-shadow: none
+      border-radius: 5px
+      font-weight: 400
+      background-image: none
+      padding: 20px 30px
+      font-size: $fontSize
+      border-style: none
+      z-index: 100
 
 strong, b
   font-weight: 600
 
 .blank_slate_container .blank_slate
   color: #7f8c8d
+  border: 0
 
 form fieldset > ol > li fieldset ol li
   clear: both
