@@ -1,0 +1,19 @@
+name: Publish gem to Github Packages
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build and publish to GitHub Package
+        uses: actionshub/publish-gem-to-github@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: ${{ secrets.OWNER }}
