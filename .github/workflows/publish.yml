@@ -2,6 +2,8 @@ name: Publish gem to Github Packages
 
 on:
   push:
+    branches:
+      - '*'
     tags:
       - '*'
 
@@ -15,5 +17,5 @@ jobs:
       - name: Build and publish to GitHub Package
         uses: actionshub/publish-gem-to-github@master
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PUBLISH_TOKEN }}
           owner: ${{ secrets.OWNER }}
