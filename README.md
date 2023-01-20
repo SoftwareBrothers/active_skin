@@ -88,13 +88,13 @@ You can even change basic colors of the theme by placing some other variables:
 
 ## License
 
-active_skin is Copyright © 2018 SoftwareBrothers.co. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.txt) file.
+AdminJS is copyrighted © 2023 rst.software. It is a free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
 
-## About SoftwareBrothers.co
+## About rst.software
 
-<img src="https://softwarebrothers.co/assets/images/software-brothers-logo-full.svg" width=240>
+<img src="https://pbs.twimg.com/profile_images/1367119173604810752/dKVlj1YY_400x400.jpg" width=150>
 
-We are a software company who provides web and mobile development and UX/UI services, friendly team that helps clients from all over the world to transform their businesses and create astonishing products.
+We’re an open, friendly team that helps clients from all over the world to transform their businesses and create astonishing products.
 
-* We are available to [hire](https://softwarebrothers.co/contact).
-* If you want to work for us - checkout the [career page](https://softwarebrothers.co/career).
+* We are available for [hire](https://www.rst.software/estimate-your-project).
+* If you want to work for us - check out the [career page](https://www.rst.software/join-us).
